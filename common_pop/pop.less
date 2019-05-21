@@ -1,0 +1,100 @@
+@pop_confirm: #3490fc;
+@pop_cancle: #e6e6e6;
+@pop_strong: #d0d0d0;
+.pop_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.8);
+  z-index: 9;
+}
+
+.pop_single {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 84%;
+    border-radius: .2em;
+    z-index: 99;
+    background: #fff;
+    overflow: hidden;
+    .msg_wrap {
+      padding: 0.45rem 0;
+      box-sizing: border-box;
+      .pop_msg {
+        line-height: 0.5rem;
+        font-size: 0.3rem;
+        color: #333;
+        text-align: center;
+        &.red_flag {
+          font-size: 0.4rem;
+          line-height: 0.64rem;
+          color: @pop_strong;
+          font-weight: bold;
+        }
+      }
+    }
+    .confirm_btn {
+      width: 100%;
+      display: block;
+      height: 0.9rem;
+      line-height: 0.9rem;
+      text-align: center;
+      color: #fff;
+      font-size: 0.32rem;
+      background: @pop_confirm;
+    }
+  }
+
+  .pop_double {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 84%;
+    border-radius: .2em;
+    z-index: 99;
+    background: #fff;
+    overflow: hidden;
+    .msg_wrap {
+      padding: 0.65rem 0;
+      box-sizing: border-box;
+    }
+    .pop_msg {
+      line-height: 0.5rem;
+      font-size: 0.3rem;
+      color: #333;
+      text-align: center;
+      &.red_flag {
+        font-size: 0.4rem;
+        line-height: 0.64rem;
+        color: @pop_strong;
+        font-weight: bold;
+      }
+    }
+    .pop_double_btn_wrap {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      >a {
+        display: inline-block;
+        width: 50%;
+        height: 0.9rem;
+        line-height: 0.9rem;
+        font-size: 0.32rem;
+        text-align: center;
+        &.cancle_btn {
+          background: @pop_cancle;
+          color: #666;
+        }
+        &.confirm_btn {
+          background: @pop_confirm;
+          color: #fff;
+        }
+      }
+    }
+  }

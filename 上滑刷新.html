@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .block {
+            height: 800px;
+            margin-bottom: 20px;
+            background: red;;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+
+    </div>
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        var count = 1;
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= $(document).outerHeight() - $(window).height() - 20) {
+               count++;
+               console.log(count);
+               var html = `
+                <div class="block"></div>
+               `
+               $('body').append(html);
+            }
+    });
+    </script>
+</body>
+</html>

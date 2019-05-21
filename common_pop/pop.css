@@ -1,0 +1,95 @@
+.pop_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9;
+}
+.pop_single {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 84%;
+  border-radius: .2em;
+  z-index: 99;
+  background: #fff;
+  overflow: hidden;
+}
+.pop_single .msg_wrap {
+  padding: 0.45rem 0;
+  box-sizing: border-box;
+}
+.pop_single .msg_wrap .pop_msg {
+  line-height: 0.5rem;
+  font-size: 0.3rem;
+  color: #333;
+  text-align: center;
+}
+.pop_single .msg_wrap .pop_msg.red_flag {
+  font-size: 0.4rem;
+  line-height: 0.64rem;
+  color: #d9000e;
+  font-weight: bold;
+}
+.pop_single .confirm_btn {
+  width: 100%;
+  display: block;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.32rem;
+  background: #d9000e;
+}
+.pop_double {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 84%;
+  border-radius: .2em;
+  z-index: 99;
+  background: #fff;
+  overflow: hidden;
+}
+.pop_double .msg_wrap {
+  padding: 0.65rem 0;
+  box-sizing: border-box;
+}
+.pop_double .pop_msg {
+  line-height: 0.5rem;
+  font-size: 0.3rem;
+  color: #333;
+  text-align: center;
+}
+.pop_double .pop_msg.red_flag {
+  font-size: 0.4rem;
+  line-height: 0.64rem;
+  color: #d9000e;
+  font-weight: bold;
+}
+.pop_double .pop_double_btn_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pop_double .pop_double_btn_wrap > a {
+  display: inline-block;
+  width: 50%;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  font-size: 0.32rem;
+  text-align: center;
+}
+.pop_double .pop_double_btn_wrap > a.cancle_btn {
+  background: #e6e6e6;
+  color: #666;
+}
+.pop_double .pop_double_btn_wrap > a.confirm_btn {
+  background: #d9000e;
+  color: #fff;
+}
