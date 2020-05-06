@@ -20,15 +20,17 @@
         }
         .border-1px {
             position: relative;
+            z-index: 1;
         }
 
         .border-1px::before {
+            content: '';
             border: 1px solid #aaa;
             box-sizing: border-box;
             position: absolute;
-            content: '';
-            left: 0;
+            z-index: 2;
             top: 0;
+            left: 0;
             width: 200%;
             height: 200%;
             transform-origin: left top;
