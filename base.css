@@ -1089,7 +1089,7 @@ i.icon_logo_s {
 #web_top_nav > ul.nav_list > li.nav_item {
   flex: none;
   font-weight: bold;
-  margin-right: 0.8rem;
+  margin-right: 1rem;
 }
 #web_top_nav > ul.nav_list > li.nav_item > a {
   height: 0.9rem;
