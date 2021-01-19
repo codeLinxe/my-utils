@@ -16,6 +16,9 @@ html {
     font-size: 54px;
   }
 }
+* {
+  box-sizing: border-box;
+}
 input {
   outline: none;
   border: none;
@@ -261,4 +264,3 @@ img {
   background: rgba(0, 0, 0, 0.6);
   z-index: 99;
 }
-/*# sourceMappingURL=base.css.map */
