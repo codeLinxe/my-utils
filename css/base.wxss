@@ -1,7 +1,5 @@
 @charset "utf-8";
-
 /* 这个css是初始化的css，在任何项目里面都可以使用 */
-
 /* 禁用iPhone中Safari的字号自动调整 */
 html {
   -webkit-text-size-adjust: 100%;
@@ -13,17 +11,14 @@ html {
   font-size: 13.33333333vw;
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
-
 @media (min-width: 560px) {
   html {
     font-size: 54px;
   }
 }
-
 * {
   box-sizing: border-box;
 }
-
 input {
   outline: none;
   border: none;
@@ -31,7 +26,6 @@ input {
   padding: 0;
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
-
 textarea {
   resize: none;
   outline: none;
@@ -40,7 +34,6 @@ textarea {
   margin: 0;
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
-
 /* 禁止缩放表单 */
 input[type="submit"],
 input[type="reset"],
@@ -49,7 +42,6 @@ input {
   resize: none;
   border: none;
 }
-
 button {
   margin: 0;
   padding: 0;
@@ -57,12 +49,10 @@ button {
   outline: none;
   background: transparent;
 }
-
 /* 取消链接高亮  */
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 body {
   color: #333333;
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
@@ -76,44 +66,35 @@ body {
   -webkit-text-size-adjust: 100% !important;
   -moz-text-size-adjust: 100% !important;
 }
-
 .clearfix {
   zoom: 1;
-
-  &:after {
-    content: "";
-    display: block;
-    visibility: hidden;
-    height: 0;
-    clear: both;
-  }
 }
-
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
 a {
   text-decoration: none;
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
-
 a:active {
-  text-decoration: none
+  text-decoration: none;
 }
-
-a:hover {
-  text-decoration: none
-}
-
-a:link {
-  text-decoration: none
-}
-
-a:visited {
-  text-decoration: none
-}
-
 a:hover {
   text-decoration: none;
 }
-
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
 h1,
 h2,
 h3,
@@ -123,19 +104,16 @@ h6 {
   font-weight: normal;
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
-
 img {
   display: block;
   width: 100%;
 }
-
 /*单行溢出*/
 .one-txt-cut {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
 /*两行溢出 手机端使用*/
 .txt-cut {
   overflow: hidden;
@@ -144,7 +122,6 @@ img {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-
 /*三行溢出 手机端使用*/
 .three-txt-cut {
   overflow: hidden;
@@ -153,13 +130,14 @@ img {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-
 /* 0.5px border */
-.one_px_border_bottom, .one_px_border_top, .one_px_border_right, .one_px_border_left {
+.one_px_border_bottom,
+.one_px_border_top,
+.one_px_border_right,
+.one_px_border_left {
   position: relative;
   z-index: 1;
 }
-
 .one_px_border_bottom:before {
   content: '';
   position: absolute;
@@ -175,7 +153,6 @@ img {
   transform-origin: 0 0;
   pointer-events: none;
 }
-
 .one_px_border_top:before {
   content: '';
   position: absolute;
@@ -190,7 +167,6 @@ img {
   transform-origin: 0 0;
   pointer-events: none;
 }
-
 .one_px_border_left:before {
   content: '';
   position: absolute;
@@ -205,7 +181,6 @@ img {
   transform-origin: 0 0;
   pointer-events: none;
 }
-
 .one_px_border_right:before {
   content: '';
   position: absolute;
@@ -220,40 +195,33 @@ img {
   transform-origin: 0 0;
   pointer-events: none;
 }
-
 .fl {
   float: left;
 }
-
 .fr {
   float: right;
 }
-
 [v-cloak] {
   display: none !important;
 }
-
 .Diffuse_shadow {
   position: relative;
-
-  &:before {
-    content: "";
-    position: absolute;
-    width: calc(100% - 0.4rem);
-    height: 100%;
-    background: linear-gradient(120deg, #9fa6b1 0%, #9fa6b1 80%);
-    filter: blur(0.2rem) brightness(0.95);
-    left: 0.2rem;
-    top: 0;
-    z-index: -1;
-  }
 }
-
+.Diffuse_shadow:before {
+  content: "";
+  position: absolute;
+  width: calc(99.6%);
+  height: 100%;
+  background: linear-gradient(120deg, #9fa6b1 0%, #9fa6b1 80%);
+  filter: blur(0.2rem) brightness(0.95);
+  left: 0.2rem;
+  top: 0;
+  z-index: -1;
+}
 .gaussian {
   -webkit-filter: blur(5px);
   filter: blur(5px);
 }
-
 .common_modal {
   position: fixed;
   top: 0;

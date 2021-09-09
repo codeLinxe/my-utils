@@ -195,43 +195,14 @@ img {
   transform-origin: 0 0;
   pointer-events: none;
 }
-.w50 {
-  width: 50%;
-}
-.w25 {
-  width: 25%;
-}
-.w20 {
-  width: 20%;
-}
-.w33 {
-  width: 33.333333%;
-}
 .fl {
   float: left;
 }
 .fr {
   float: right;
 }
-.db {
-  display: block !important;
-}
-.dn {
-  display: none !important;
-}
 [v-cloak] {
   display: none !important;
-}
-#app {
-  position: relative;
-  height: 100vh;
-  box-sizing: border-box;
-  overflow: hidden;
-  overflow-y: auto;
-  z-index: 1;
-}
-#app::-webkit-scrollbar {
-  display: none;
 }
 .Diffuse_shadow {
   position: relative;
@@ -251,16 +222,12 @@ img {
   -webkit-filter: blur(5px);
   filter: blur(5px);
 }
-.animated.fastest {
-  -webkit-animation-duration: 0.2s;
-  animation-duration: 0.2s;
-}
 .common_modal {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 99;
 }
