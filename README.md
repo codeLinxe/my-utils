@@ -7,3 +7,6 @@
 https://github.com/Justineo/vue-clamp
 
 ### js插件
+1. 网页生成图片
+
+https://github.com/niklasvh/html2canvas
