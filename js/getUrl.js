@@ -22,3 +22,20 @@ function getUrlParams(url = window.location.href) {
     }
     return result;
 }
+
+/**
+ * 获取url参数
+ *
+ * @param {*} name
+ * @param {*} [url=window.location.serach]
+ * @returns
+ */
+function getQueryString(name, url) {
+    var url = url || window.location.href
+    var reg = new RegExp('(^|&|/?)' + name + '=([^&|/?]*)(&|/?|$)', 'i')
+    var r = url.substr(1).match(reg)
+    if (r != null) {
+        return r[2]
+    }
+    return null
+}
