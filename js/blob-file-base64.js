@@ -1,49 +1,27 @@
-/**
- * @desc 将base64转换为blob
- * @param dataurl {String}
- * @returns {Blob}
- */
-function dataURLtoBlob(dataurl) {
-    var arr = dataurl.split(','),
-        mime = arr[0].match(/:(.*?);/)[1],
-        bstr = atob(arr[1]),
-        n = bstr.length,
-        u8arr = new Uint8Array(n);
-    while (n--) {
-        u8arr[n] = bstr.charCodeAt(n);
+const b64toBlob = (b64Data, contentType = '', sliceSize = 512) => {
+    b64Data = b64Data.toString()
+    const byteCharacters = atob(b64Data.replace(/^data:image\/(png|jpeg|jpg);base64,/, ''));
+    const byteArrays = [];
+
+
+    for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+        const slice = byteCharacters.slice(offset, offset + sliceSize);
+        const byteNumbers = new Array(slice.length);
+        for (let i = 0; i < slice.length; i++) {
+            byteNumbers[i] = slice.charCodeAt(i);
+        }
+        const byteArray = new Uint8Array(byteNumbers);
+        byteArrays.push(byteArray);
     }
-    return new Blob([u8arr], {
-        type: mime
+    const blob = new Blob(byteArrays, {
+        type: contentType
     });
+    return blob;
 }
 
-/**
- * @desc 将blob转换为file
- * @param theBlob {Blob}
- * @param fileName {String}
- */
-function blobToFile(theBlob, fileName) {
-    theBlob.lastModifiedDate = new Date();
-    theBlob.name = fileName;
-    return theBlob;
-}
 
-/**
- * @desc 将base64转换成图片文件
- * @param base64 {String}
- * @param filename {String}
- * @returns {File}
- */
-function dataURLtoFile(base64, filename) {
-    var arr = base64.split(','),
-        mime = arr[0].match(/:(.*?);/)[1],
-        bstr = atob(arr[1]),
-        n = bstr.length,
-        u8arr = new Uint8Array(n);
-    while (n--) {
-        u8arr[n] = bstr.charCodeAt(n);
-    }
-    return new File([u8arr], filename, {
-        type: mime
+const blob2File = (theBlob, fileName) => {
+    return new File([theBlob], fileName + '.png', {
+        type: 'image/png'
     });
 }
