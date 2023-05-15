@@ -10,6 +10,11 @@ https://github.com/Justineo/vue-clamp
 https://chenxuan0000.github.io/vue-seamless-scroll/zh/guide/#npm
 
 ### js插件
+
 1. 网页生成图片
 
-https://github.com/niklasvh/html2canvas
+<https://github.com/niklasvh/html2canvas>
+
+2. lucky-canvas(抽奖插件)
+
+<https://100px.net/>
