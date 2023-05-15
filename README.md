@@ -19,6 +19,6 @@
 
     <https://github.com/niklasvh/html2canvas>
 
-2. lucky-canvas(抽奖插件)
+2. lucky-canvas（快速生成【大转盘 & 九宫格 & 老虎机】抽奖）
 
     <https://100px.net/>
