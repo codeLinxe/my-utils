@@ -1,0 +1,63 @@
+$theme-color: #fff;
+
+@mixin fr($justify: center, $items: center, $wrap: nowrap) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $items;
+  flex-wrap: $wrap;
+}
+
+@mixin fc($justify: center, $items: center, $wrap: nowrap) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $items;
+  flex-wrap: $wrap;
+}
+
+@mixin imgBg($sizeX: 100%, $sizeY: 100%, $posX: center, $posY: center) {
+  background-repeat: no-repeat;
+  background-size: $sizeX $sizeY;
+  background-position: $posX $posY;
+}
+
+@mixin van_file_custom($size: 26px, $color: #222, $weight: 500, $place_color: #999) {
+  :deep(.van-cell) {
+    padding: 0;
+    background: transparent;
+    height: 100%;
+
+    &::after {
+      border: 0;
+    }
+  }
+
+  :deep(.van-field) {
+    .van-field__body {
+      height: 100%;
+    }
+
+    .van-field__control {
+      height: 100%;
+      font-size: $size;
+      color: $color;
+      font-weight: $weight;
+
+      &::placeholder {
+        font-size: $size;
+        color: $place_color;
+        font-weight: $weight;
+      }
+    }
+  }
+}
+
+@mixin van_list_end($color: #fff) {
+
+  :deep(.van-list__finished-text),
+  :deep(.van-loading__text),
+  :deep(.van-list__error-text) {
+    color: $color;
+  }
+}
