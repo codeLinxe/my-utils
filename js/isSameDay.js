@@ -8,16 +8,14 @@ function isSameDay(date1, date2) {
   if (!date2) {
     date2 = new Date();
   }
-  var date1_year = date1.getFullYear(),
-    date1_month = date1.getMonth() + 1,
-    date1_date = date1.getDate();
-  var date2_year = date2.getFullYear(),
-    date2_month = date2.getMonth() + 1,
-    date2_date = date2.getDate();
+  const date1ZeroTimer = date1.setHours(0, 0, 0, 0)
+  const date2ZeroTimer = date2.setHours(0, 0, 0, 0)
 
-  return (
-    date1_date === date2_date &&
-    date1_month === date2_month &&
-    date1_year === date2_year
-  );
+  return date1ZeroTimer === date2ZeroTimer
 }
+
+let date1 = new Date('2023-05-16T03:24:00');
+
+const result = isSameDay(date1)
+
+console.log('result', result)
