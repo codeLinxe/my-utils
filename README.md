@@ -22,3 +22,7 @@
 2. lucky-canvas（快速生成【大转盘 & 九宫格 & 老虎机】抽奖）
 
     <https://100px.net/>
+
+3. js-cookie
+
+    <https://github.com/js-cookie/js-cookie>
