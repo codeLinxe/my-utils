@@ -1,22 +1,16 @@
-const b64toBlob = (b64Data, contentType = '', sliceSize = 512) => {
-    b64Data = b64Data.toString()
-    const byteCharacters = atob(b64Data.replace(/^data:image\/(png|jpeg|jpg);base64,/, ''));
-    const byteArrays = [];
-
-
-    for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
-        const slice = byteCharacters.slice(offset, offset + sliceSize);
-        const byteNumbers = new Array(slice.length);
-        for (let i = 0; i < slice.length; i++) {
-            byteNumbers[i] = slice.charCodeAt(i);
-        }
-        const byteArray = new Uint8Array(byteNumbers);
-        byteArrays.push(byteArray);
+const b64toFile = (dataurl, filename) => {
+    // 获取到base64编码
+    const arr = dataurl.split(',')
+    // 将base64编码转为字符串
+    const bstr = window.atob(arr[1])
+    let n = bstr.length
+    const u8arr = new Uint8Array(n) // 创建初始化为0的，包含length个元素的无符号整型数组
+    while (n--) {
+        u8arr[n] = bstr.charCodeAt(n)
     }
-    const blob = new Blob(byteArrays, {
-        type: contentType
-    });
-    return blob;
+    return new File([u8arr], filename, {
+        type: 'image/png',
+    })
 }
 
 
