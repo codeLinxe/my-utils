@@ -11,7 +11,7 @@ html {
   /* 解决IOS触摸时的颜色问题 */
   -webkit-tap-highlight-color: transparent;
   font-size: 13.33333333vw;
-  font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,Helvetica Neue,Arial,sans-serif;
 }
 
 @media (min-width: 560px) {
@@ -20,8 +20,13 @@ html {
   }
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
 }
 
 input {
@@ -29,7 +34,6 @@ input {
   border: none;
   margin: 0;
   padding: 0;
-  font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 textarea {
@@ -38,7 +42,6 @@ textarea {
   border: none;
   padding: 0;
   margin: 0;
-  font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 /* 禁止缩放表单 */
@@ -65,7 +68,7 @@ a {
 
 body {
   color: #333333;
-  font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,Helvetica Neue,Arial,sans-serif;
   background-color: #fff;
   line-height: 1.15;
   max-width: 640px;
@@ -91,7 +94,7 @@ body {
 
 a {
   text-decoration: none;
-  font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,Helvetica Neue,Arial,sans-serif;
 }
 
 a:active {
@@ -121,12 +124,11 @@ h4,
 h5,
 h6 {
   font-weight: normal;
-  font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
 }
 
 /*单行溢出*/
@@ -254,12 +256,7 @@ img {
   filter: blur(5px);
 }
 
-.common_modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 99;
+/* 适配iphonex 有底部横条的 */
+@supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
+  
 }
