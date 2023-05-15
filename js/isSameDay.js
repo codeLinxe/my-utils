@@ -14,7 +14,7 @@ function isSameDay(date1, date2) {
   return date1ZeroTimer === date2ZeroTimer
 }
 
-let date1 = new Date('2023-05-16T03:24:00');
+let date1 = new Date('2023-05-15T05:55:55');
 
 const result = isSameDay(date1)
 
