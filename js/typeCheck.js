@@ -1,0 +1,11 @@
+const isUndefined = o => Object.prototype.toString.call(o).slice(8, -1) === 'Undefined' // Undefined类型
+const isNull = o => Object.prototype.toString.call(o).slice(8, -1) === 'Null' // Null类型
+const isBoolean = o => Object.prototype.toString.call(o).slice(8, -1) === 'Boolean' // Boolean类型
+const isNumber = o => Object.prototype.toString.call(o).slice(8, -1) === 'Number' // Number类型
+const isBigInt = o => Object.prototype.toString.call(o).slice(8, -1) === 'BigInt' // BigInt类型
+const isString = o => Object.prototype.toString.call(o).slice(8, -1) === 'String' // String类型
+const isSymbol = o => Object.prototype.toString.call(o).slice(8, -1) === 'Symbol' // Symbol类型
+const isObject = o => Object.prototype.toString.call(o).slice(8, -1) === 'Object' // Object类型
+const isFunction = o => Object.prototype.toString.call(o).slice(8, -1) === 'Function' // Function类型
+const isArray = o => Object.prototype.toString.call(o).slice(8, -1) === 'Array' // Array类型
+const isDate = o => Object.prototype.toString.call(o).slice(8, -1) === 'Date' // Date类型
