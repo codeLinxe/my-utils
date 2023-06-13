@@ -26,3 +26,9 @@
 3. js-cookie
 
     <https://github.com/js-cookie/js-cookie>
+
+### 动画
+
+1. lottie
+    
+    <https://airbnb.design/lottie/>
