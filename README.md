@@ -15,7 +15,7 @@
 
 ### js插件
 
-1. 网页生成图片
+1. 网页生成图片html2canvas
 
     <https://github.com/niklasvh/html2canvas>
 
@@ -30,6 +30,7 @@
 4. 大屏自适应autofit.js（scale方案）
 
     <https://github.com/995231030/autofit.js>
+    <https://juejin.cn/post/7231089453694009404>
 
 ### 动画
 
