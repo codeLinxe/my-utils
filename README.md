@@ -27,6 +27,10 @@
 
     <https://github.com/js-cookie/js-cookie>
 
+4. 大屏自适应autofit.js（scale方案）
+
+    <https://github.com/995231030/autofit.js>
+
 ### 动画
 
 1. lottie
