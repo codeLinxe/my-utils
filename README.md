@@ -35,5 +35,11 @@
 ### 动画
 
 1. lottie
-    
     <https://airbnb.design/lottie/>
+
+## 源码修改的库
+
+### html2canvas
+
+1. 修复object-fit不生效的bug
+2. 修复文字下沉的bug
