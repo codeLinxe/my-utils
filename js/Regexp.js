@@ -41,3 +41,8 @@ function isUrl(str) {
 function isSpec(str) {
     return /[\-\_\,\!\|\~\`\(\)\#\$\%\^\&\*\{\}\:\;\"\L\<\>\?]/.test(str)
 }
+
+// IP地址、前后有汉字、带参数的，都是OK的。
+function urlReg(str) {
+    return /(https?|ftp|file):\/\/[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]/.test(str)
+}
