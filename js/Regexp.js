@@ -46,3 +46,20 @@ function isSpec(str) {
 function urlReg(str) {
     return /(https?|ftp|file):\/\/[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]/.test(str)
 }
+
+function strNmberTotal(e) {
+    //只保留第一个. 清除多余的(/\.{2,}/g, ".")
+    e.target.value = e.target.value.replace(/\.{2,}/g, ".");
+    //禁止录入整数部分两位以上，但首位为0
+    e.target.value = e.target.value.replace(/^([1-9]\d*(\.[\d]{0,2})?|0(\.[\d]{0,2})?)[\d.]*/g, '$1');
+    //禁止录入整数部分超过13位
+    e.target.value = e.target.value.replace(/^([1-9]\d{12})\d*/g, '$1');
+    //替换除了数字和.以外的字符
+    e.target.value = e.target.value.replace(/[^\d\.]/g, '').replace(/^0{2,}/g, '');
+    //第一个输入.  则自动变为0.
+    e.target.value = e.target.value.replace(/^\./g, '0.');
+    //保证.只出现一次，而不能出现两次以上 2..    2.2.2
+    e.target.value = e.target.value.replace('.', '$#$').replace(/\./g, '').replace('$#$', '.');
+    //只能输入两个小数
+    e.target.value = e.target.value.replace(/^(\-)*(\d+)\.(\d\d).*$/, '$1$2.$3');
+}
