@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 虚拟列表容器，类似“窗口”，窗口的高度取决于一次展示几条数据
+                比如窗口只能看到10条数据，一条40像素，10条400像素
+                故，窗口的高度为400像素，注意要开定位和滚动条 -->
+    <div class="virtualListWrap" ref="virtualListWrap" @scroll="handleScroll"
+      :style="{ height: itemHeight * count + 'px' }">
+      <!-- 占位dom元素，其高度为所有的数据的总高度 -->
+      <div class="placeholderDom" :style="{ height: allListData.length * itemHeight + 'px' }"></div>
+      <!-- 内容区，展示10条数据，注意其定位的top值是变化的 -->
+      <div class="contentList" :style="{ top: topVal }">
+        <!-- 每一条（项）数据 -->
+        <div v-for="(item, index) in showListData" :key="index" class="itemClass"
+          :style="{ height: itemHeight + 'px' }">
+          {{ item.name }}
+        </div>
+      </div>
+      <!-- 加载中部分 -->
+      <div class="loadingBox" v-show="loading">
+        <i class="el-icon-loading"></i>
+        &nbsp;&nbsp;<span>loading...</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  const { createApp, ref, computed } = Vue
+
+  createApp({
+    setup() {
+      let allListData = ref([])
+      let itemHeight = ref(40)
+      let count = ref(10)
+      let start = ref(0)
+      let end = ref(10)
+      let topVal = ref(0)
+      let loading = ref(false)
+      return {
+        allListData,
+        itemHeight,
+        count,
+        start,
+        end,
+        topVal,
+        loading
+      }
+    }
+  }).mount('#app')
+</script>
+
+</html>
