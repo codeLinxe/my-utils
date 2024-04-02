@@ -65,9 +65,13 @@ function strNmberTotal(e) {
 }
 /**
  * 匹配中文和标点符号
+ * 可以匹配以下中文标点符号（顺序是一一对应的）
+ * 。 ？ ！ ， 、 ； ： “ ” ‘ ’ （ ） 《 》 【 】 ~
+ * 如果上面没有想要的标点符号，可以上网查找将中文符号转换成Unicode编码添加在表达式中即可
  * @param {*} e 
  * @returns 
  */
 function isChinese(e) {
+    // 纯汉字 /[\u4e00-\u9fa5]+/g
     return /[(\u4e00-\u9fa5)(\u3002|\uff1f|\uff01|\uff0c|\u3001|\uff1b|\uff1a|\u201c|\u201d|\u2018|\u2019|\uff08|\uff09|\u300a|\u300b|\u3010|\u3011|\u007e)]+/g.text(e)
 }
