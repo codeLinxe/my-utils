@@ -34,6 +34,10 @@
     <https://github.com/995231030/autofit.js>
     <https://juejin.cn/post/7231089453694009404>
 
+5. js加密解密
+
+    <https://www.jianshu.com/p/a47477e8126a>
+
 ### 动画
 
 1. lottie
