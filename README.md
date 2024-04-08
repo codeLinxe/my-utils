@@ -45,7 +45,7 @@
 
 ## 源码修改的库
 
-### html2canvas
+### html2canvas (lib/html2canvas)
 
 1. 修复object-fit不生效的bug
 2. 修复文字下沉的bug
