@@ -5,6 +5,7 @@
  * @return {Boolean}
  */
 function isSameDay(date1, date2) {
+  if (!date1) return false
   if (!date2) {
     date2 = new Date();
   }
