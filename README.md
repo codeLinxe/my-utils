@@ -38,6 +38,10 @@
 
     <https://www.jianshu.com/p/a47477e8126a>
 
+6. touch事件封装(swipeleft,swiperight)
+
+    <https://allcky.github.io/touchjs/>
+
 ### 动画
 
 1. lottie
