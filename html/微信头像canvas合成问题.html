@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 微信头像用canvas合成海报会遇到跨域问题，可以先转成base64格式再去合成 -->
+
+  <script>
+    const wx_upic = 'https://thirdwx.qlogo.cn/mmopen/vi_32/7icobCA5aE7CxMwBIkXwGeNBOcbPpabERZgzvXfl2cW69tcdOeXTZBEANAPfRKsGAtmsDict71ia7njxZiblJqu0gA/132'
+    if (wx_upic.indexOf('thirdwx.qlogo') > -1) {
+      fetch(wx_upic)
+        .then(res => res.blob())
+        .then(blob => {
+          const reader = new FileReader();
+          reader.onloadend = function () {
+            const base64Data = reader.result;
+            console.log('avatar-base64Data', base64Data); // 输出Base64格式的头像数据
+          };
+          reader.readAsDataURL(blob);
+        })
+    }
+  </script>
+</body>
+
+</html>
