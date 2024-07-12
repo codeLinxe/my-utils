@@ -34,7 +34,7 @@
     <https://github.com/995231030/autofit.js>
     <https://juejin.cn/post/7231089453694009404>
 
-5. js加密解密
+5. js加密解密(crypto-js)
 
     <https://www.jianshu.com/p/a47477e8126a>
 
