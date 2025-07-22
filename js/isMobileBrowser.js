@@ -13,3 +13,9 @@ export function isMobileBrowser() {
   }
   return false
 }
+
+export const isMobile = () => {
+  const reg = new RegExp("(?<mobile>phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)", "iu")
+  const flag = reg.exec(navigator.userAgent)
+  return flag !== null
+}
