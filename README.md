@@ -43,6 +43,9 @@
 
     <https://allcky.github.io/touchjs/>
 
+7. uniapp用的swiper库
+    <https://v2.swiper.zebraui.com/>
+
 ### 动画
 
 1. lottie
