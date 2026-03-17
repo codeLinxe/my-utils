@@ -46,6 +46,9 @@
 7. uniapp用的swiper库
     <https://v2.swiper.zebraui.com/>
 
+8. 预览docx文件
+    <https://www.npmjs.com/package/docx-preview>
+
 ### 动画
 
 1. lottie
