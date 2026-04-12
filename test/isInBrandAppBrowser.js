@@ -158,7 +158,7 @@
     return regexp.toString().includes('ginkgo')
     // #endif
     return false
-  }
+  },
 }
   var res = false
   for(var k in o) {
