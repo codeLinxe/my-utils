@@ -139,12 +139,17 @@
   },
   k: () => {
     // #ifdef H5
-    const reg = RegExp('circle', 'u')
-    const regexp = window.navigator.userAgent.toLowerCase().match(reg)
-    if (regexp === null) {
-      return false
+    const reg1 = RegExp('circle','u')
+    const regexp1 = window.navigator.userAgent.toLowerCase().match(reg1)
+    if (regexp1) {
+      return regexp1.toString().includes('circle')
     }
-    return regexp.toString().includes('circle')
+
+    const reg2 = RegExp('avocado','u')
+    const regexp2 = window.navigator.userAgent.toLowerCase().match(reg2)
+    if (regexp2) {
+      return regexp2.toString().includes('avocado')
+    }
     // #endif
     return false
   },
